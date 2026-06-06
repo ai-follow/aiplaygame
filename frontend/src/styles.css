@@ -1430,6 +1430,24 @@ p {
   margin-right: 0;
 }
 
+.hidden-card-stack.side-hand .card,
+.card-row.side-hand .card {
+  width: 60px;
+  height: 42px;
+  flex-basis: 42px;
+  align-items: center;
+  justify-content: center;
+  margin-top: -24px;
+}
+
+.hidden-card-stack.side-hand .card-svg,
+.card-row.side-hand .card-svg {
+  width: 42px;
+  height: 60px;
+  transform: rotate(90deg);
+  transform-origin: center;
+}
+
 .hidden-card-stack .card:first-child,
 .card-row.side-hand .card:first-child {
   margin-top: 0;
