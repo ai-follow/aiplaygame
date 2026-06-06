@@ -1,0 +1,15 @@
+{
+  "requests": [
+    {
+      "player": 0,
+      "landlord": 0,
+      "hand": ["3", "3", "4", "4", "5", "5", "6", "7", "8", "9", "T", "J", "Q", "K", "A", "2", "BJ", "RJ"],
+      "lastAction": {
+        "player": 2,
+        "kind": "play",
+        "cards": ["7"]
+      }
+    }
+  ],
+  "responses": []
+}
