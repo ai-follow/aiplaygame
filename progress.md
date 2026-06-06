@@ -24,6 +24,8 @@ Progress:
 - Latest Playwright visual verification for the table-layer layout is in `output/web-game-room-tablelayers-live/shot-0.png`.
 - Latest Playwright visual verification for the rectangular table/timer layout is in `output/web-game-room-rect-timer/shot-0.png`.
 - Updated card rendering to SVG-based card faces/backs in the live frontend, moved hand counts into the hand layer, tightened side-player vertical stacks, and fixed bottom main-hand clipping. Validation passed with `npm run build --prefix frontend`, `npm run lint --prefix frontend`, and Playwright screenshots at `http://127.0.0.1:5175/?auto=1&players=douzero,douzero,douzero` (latest default output: `output/web-game/shot-4.png`).
+- Refactored the frontend out of the oversized `App.tsx` into card, shared UI, room, table, constants, and utility modules. Updated live table behavior so finished games reveal all remaining hands, active turn countdowns render inside the played-card zone without P labels or panel chrome, and the winner is shown as a centered banner below the bottom cards. Validation passed with frontend lint/build and Playwright screenshots for running and finished policy games.
+- Updated joker card SVG rendering so big/small jokers display as Chinese 大王/小王 style cards instead of BJ/RJ or English JOKER labels. Validation passed with frontend lint/build and Playwright screenshot inspection.
 
 Notes:
 - Commercial-client visual automation is intentionally out of scope. The implementation targets local real-time matches and Botzone-style bot submission flows.

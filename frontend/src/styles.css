@@ -555,7 +555,8 @@ p {
 
 .card-row.main-hand {
   flex-wrap: nowrap;
-  justify-content: flex-start;
+  justify-content: center;
+  width: 100%;
   max-width: 100%;
   overflow: visible;
   padding: 6px 0 2px;
@@ -579,9 +580,9 @@ p {
 }
 
 .main-hand .card {
-  width: 50px;
-  height: 72px;
-  flex-basis: 50px;
+  width: 40px;
+  height: 58px;
+  flex: 0 0 40px;
   margin-right: -22px;
 }
 
@@ -1382,18 +1383,21 @@ p {
   bottom: 130px;
   transform: translateX(-50%);
   width: min(760px, 74%);
+  z-index: 3;
 }
 
 .table-hand-layer.seat-1 {
   left: 46px;
   top: 172px;
   width: 78px;
+  z-index: 2;
 }
 
 .table-hand-layer.seat-2 {
   right: 46px;
   top: 172px;
   width: 78px;
+  z-index: 2;
 }
 
 .table-hand-layer.main-view {
@@ -1437,7 +1441,7 @@ p {
   flex-basis: 42px;
   align-items: center;
   justify-content: center;
-  margin-top: -24px;
+  margin-top: -30px;
 }
 
 .hidden-card-stack.side-hand .card-svg,
@@ -1497,12 +1501,8 @@ p {
   min-width: 150px;
   min-height: 70px;
   padding: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  background: rgba(0, 0, 0, 0.14);
-}
-
-.table-played-layer.active {
-  border-color: var(--gold);
+  border: 0;
+  background: transparent;
 }
 
 .table-played-layer > span {
@@ -1559,7 +1559,6 @@ p {
 }
 
 .turn-clock {
-  position: absolute;
   z-index: 5;
   display: grid;
   grid-template-columns: auto auto;
@@ -1573,22 +1572,6 @@ p {
   background: rgba(23, 16, 6, 0.86);
   color: #fff4c2;
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
-}
-
-.table-hand-layer.seat-0 .turn-clock {
-  left: 50%;
-  bottom: calc(100% + 30px);
-  transform: translateX(-50%);
-}
-
-.table-hand-layer.seat-1 .turn-clock {
-  left: calc(100% + 10px);
-  top: 10px;
-}
-
-.table-hand-layer.seat-2 .turn-clock {
-  right: calc(100% + 10px);
-  top: 10px;
 }
 
 .turn-clock div {
@@ -1618,25 +1601,21 @@ p {
   white-space: nowrap;
 }
 
-.winner-overlay {
+.winner-banner {
   position: absolute;
-  inset: 0;
-  display: grid;
-  place-content: center;
-  gap: 8px;
-  background: rgba(0, 0, 0, 0.28);
-  text-align: center;
-}
-
-.winner-overlay strong {
+  top: 116px;
+  left: 50%;
+  z-index: 6;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  padding: 0 18px;
+  border: 2px solid var(--gold);
+  background: rgba(30, 22, 6, 0.82);
   color: #ffe094;
-  font-size: clamp(42px, 6vw, 82px);
-  line-height: 1;
-}
-
-.winner-overlay span {
-  color: #fff8db;
-  font-size: 24px;
+  text-align: center;
+  transform: translateX(-50%);
   font-weight: 900;
 }
 

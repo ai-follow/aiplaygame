@@ -4,7 +4,7 @@ import { useCallback, useEffect, useState } from 'react';
 import { API_BASE, DEFAULT_PLAYERS } from './constants';
 import { profileFromSeat } from './gameUtils';
 import { Avatar, LinkLine, SeatSelector } from './shared';
-import type { PlayerProfile, RoomPlayerConfig, RoomResponse, RoomSeat } from './types';
+import type { RoomPlayerConfig, RoomResponse, RoomSeat } from './types';
 
 export function RoomManager() {
   const [rooms, setRooms] = useState<RoomResponse[]>([]);
